@@ -112,7 +112,7 @@ plt.figure(figsize=(10,5))
 plt.plot(t_float,H)
 plt.title("Angulo horario H vs. hora del día")
 plt.xlabel("Hora")
-plt.ylabel("Producción W")
+plt.ylabel("angulo")
 plt.grid(True)
 
 plt.xticks(np.arange(0, 25, 1))
