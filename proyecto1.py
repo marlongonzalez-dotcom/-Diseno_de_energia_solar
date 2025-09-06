@@ -10,11 +10,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from numpy import radians,sin,cos,pi
-# arc=os.listdir()
-
-# archivo=open('Copia de SolarArrayProduction.csv',"r",encoding='utf-8')
-# linea = archivo.readlines()
-# archivo.close()
 
 df=pd.read_csv('Copia de SolarArrayProduction.csv',sep=";", header=None, skiprows=1,names=["fechaHora","elect p1","elect p2"])
 df["fechaHora"] = df["fechaHora"].astype(str).str.strip()
@@ -136,8 +131,3 @@ plt.xticks(np.arange(0, 25, 1))
 plt.show
 
 
-# altura = np.arcsin(np.sin(lat_rad) * np.sin(declinacion) + np.cos(lat_rad) * np.cos(declinacion) * np.cos(H))
-# azimuth_sol = np.arctan2(-np.cos(declinacion) * np.sin(H),
-#                          np.cos(lat_rad) * np.sin(declinacion) - np.sin(lat_rad) * np.cos(declinacion) * np.cos(H))
-# azimuth_sol = np.degrees(azimuth_sol)
-# azimuth_sol = (azimuth_sol + 360) % 360
